@@ -1,0 +1,27 @@
+cd C:\Users\family HP\Documents\NetBeansProjects\181803052-HERNANDEZ-ALEJANDRO-FU-POO\AreaDeCuadrado; "JAVA_HOME=C:\\Program Files\\Java\\jdk-14.0.1" cmd /c "\"C:\\Program Files\\NetBeans-11.3\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dexec.args=\"-classpath %classpath areaCuadrado\" -Dexec.executable=\"C:\\Program Files\\Java\\jdk-14.0.1\\bin\\java.exe\" -Dmaven.ext.class.path=\"C:\\Program Files\\NetBeans-11.3\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" -Dfile.encoding=UTF-8 process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec"
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building AreaDeCuadrado 1.0-SNAPSHOT
+------------------------------------------------------------------------
+
+--- maven-resources-plugin:2.6:resources (default-resources) @ AreaDeCuadrado ---
+Using 'UTF-8' encoding to copy filtered resources.
+skip non existing resourceDirectory C:\Users\family HP\Documents\NetBeansProjects\181803052-HERNANDEZ-ALEJANDRO-FU-POO\AreaDeCuadrado\src\main\resources
+
+--- maven-compiler-plugin:3.1:compile (default-compile) @ AreaDeCuadrado ---
+Changes detected - recompiling the module!
+Compiling 1 source file to C:\Users\family HP\Documents\NetBeansProjects\181803052-HERNANDEZ-ALEJANDRO-FU-POO\AreaDeCuadrado\target\classes
+
+--- exec-maven-plugin:1.5.0:exec (default-cli) @ AreaDeCuadrado ---
+Dame un numero
+5
+El numero leido es:5.0
+El area del cuadrado es:25.0
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 21.817 s
+Finished at: 2020-05-21T08:37:24-05:00
+Final Memory: 11M/40M
+------------------------------------------------------------------------
