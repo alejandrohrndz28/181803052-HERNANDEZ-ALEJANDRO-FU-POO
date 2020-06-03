@@ -49,6 +49,7 @@ public class JuegoMain {
         System.out.println(oro.toString());
         System.out.println(diamante.toString());
         System.out.println(adamantium.toString());
+        bronce.disparar();
        
     }
      

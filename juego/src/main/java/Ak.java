@@ -15,7 +15,7 @@ public class Ak {
 
     @Override
     public String toString() {
-        return "Ak{" + "tipo=" + tipo + ", cargador=" + cargador + ", precision=" + precision + ", velocidad=" + velocidad + ", precio=" + precio + ", danio=" + danio + '}';
+        return "Ak{" + "\n tipo=" + tipo + ", \n cargador=" + cargador + ",\n precision=" + precision + ",\n velocidad=" + velocidad + ",\n precio=" + precio + "\n danio=" + danio + '}';
     }
 
    
