@@ -8,12 +8,13 @@ public class Tarjeta {
     int cv;
     double monto;
     double apartado;
+    double retiro;
 
-    //Contructor vacio
+  
     public Tarjeta() {
     }
 
-    //Constructor con todos los atributos
+   
     public Tarjeta(int nCuenta, String nombre, int dia, int mes, int anio, int cv, double monto, double apartado) {
         this.nCuenta = nCuenta;
         this.nombre = nombre;
@@ -51,20 +52,42 @@ public class Tarjeta {
         this.monto += depositar;
     }
 
-    public void retirar(double retirar) {
-        this.monto -= retirar;
+   
+      public void retirar(double retirar) {
+
+         if (retirar <= this.monto) {
+            this.monto -= retirar;}
+         else {
+            System.out.println("¡Intente de nuevo !");
+        }
     }
 
-    public void crearApartado(double apartar){
-        this.apartado+= apartar;
-        this.monto -= apartar;
+    
+    
+    public void verificaRetiro(double retiro){
+        if(retiro > monto){
+            System.out.println("La transaccion no se puede realizar por dinero insuficiente");
+        }
     }
 
-    public void eliminarApartado(){
+    //Método eliminar el apartado
+    public void eliminarApartado() {
+
         this.monto += this.apartado;
-        this.apartado = 0;
-    }
+        this.apartado -= this.apartado;
 
+    }
+    
+    //Método para crear apartado
+    public void crearApartado(double apartado){
+        if (apartado>monto){
+            System.out.println("El apartado sobrepasa tu saldo disponible ");
+        }else{
+            this.apartado += apartado;
+            this.monto -= apartado;
+            this.apartado += apartado;
+        }
+    }
     @Override
     public String toString() {
         if (this.apartado > 0) {

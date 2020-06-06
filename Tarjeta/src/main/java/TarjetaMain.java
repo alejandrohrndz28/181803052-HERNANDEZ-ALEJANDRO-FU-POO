@@ -24,27 +24,20 @@ public class TarjetaMain {
         tarjeta = new Tarjeta().verificarCuenta(nCuenta, nip); 
         tarjeta.verificarCuenta(nCuenta, nip);
 
-        do {
-            if (tarjeta.apartado <= 0) {
-                System.out.println("\n\tMenu");
-                System.out.println("1.- Hacer un deposito");
-                System.out.println("2.- Hacer un retiro");
-                System.out.println("3.- Crear apartado\n");
-                System.out.println("5.- Imprimir datos de la cuenta");
-                System.out.println("6.- Salir");
-                System.out.print("Opcion: ");
-                opcion = dato.nextInt();
+        do { 
+            System.out.println("1-Hacer Deposito");
+            System.out.println("2-Hacer un Retiro");
+            if (tarjeta.apartado > 0) {
+                System.out.println("3-Eliminar apartado");
             } else {
-                System.out.println("\n\tMenu");
-                System.out.println("1.- Hacer un deposito");
-                System.out.println("2.- Hacer un retiro");
-                System.out.println("3.- Crear apartado");
-                System.out.println("4.- Eliminar apartado");
-                System.out.println("5.- Imprimir datos de la cuenta");
-                System.out.println("6.- Salir");
-                System.out.print("Opcion: ");
+                System.out.println("3-Crear apartado");
+            } 
+            System.out.println("4-Imprimir datos de la Cuenta");
+            System.out.println("5- mostrar datos de la cuenta");
+            System.out.println("6- salir");
+            System.out.println("Que mivimiento deseas realizar: ");
                 opcion = dato.nextInt();
-            }
+            
             switch (opcion) {
 
                 case 1:
@@ -52,18 +45,26 @@ public class TarjetaMain {
                     System.out.println("\nIngrese la cantidad que quiere depositar: ");
                     tarjeta.depositar(dato.nextDouble());
                     System.out.println("Se han depositado correctamente");
+                    
                     break;
                 case 2:
                     double retirar;
                     System.out.println("\nIngrese la cantidad que quiere retirar: ");
                     retirar = dato.nextDouble();
                     tarjeta.retirar(retirar);
+                    
+                    
                     break;
                 case 3:
-                    double apartar;
-                    System.out.println("\nDigite el aparatado que desea realizar: ");
-                    apartar = dato.nextDouble();
-                    tarjeta.crearApartado(apartar);
+                       if (tarjeta.apartado > 0) {
+                           tarjeta.eliminarApartado();
+                        System.out.println("Apartado Eliminado");
+                    } else if (tarjeta.apartado == 0) {
+                        System.out.println("Cuanto quiere apartar");
+                        double apartar;
+                        apartar = dato.nextDouble();
+                        tarjeta.crearApartado(apartar);
+                    }
                     break;
                 case 4:
                     System.out.println("\nApartado Eliminado");
@@ -73,7 +74,7 @@ public class TarjetaMain {
                     System.out.println(tarjeta.toString());
                     break;
                 case 6:
-                    System.out.println("\nVuelva pronto");
+                    System.out.println("\nRegrsa pronto");
                     break;
                 default:
                     System.out.println("\nNo existe esa opcion");
